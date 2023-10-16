@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: rgb(97, 98, 99);
+    width: 100%;
+    display: grid;
+    grid-gap:.2rem;
+    grid-template-rows: 90vh repeat(5, max-content);
+    grid-template-columns:repeat(6, 1fr);  
+}
+.grid_items{
+    background-color: #fee60d;
+    border-radius: 2px;
+    text-align: center;
+    /* padding: 2px ; */
+    align-items: center;
+    justify-items: center;
+}
+header{
+    background-image: url(/wood.jpg);
+    background-size: cover;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 20px;
+    align-content:center;
+    color: aliceblue;
+}
+.header-txt{
+    transition: 1s;
+}
+.header-txt:hover{
+    font-size: 3rem;
+}
+.header-btn{
+    padding: 15px 45px;
+    background-color: #fee60d;
+    border: 1px solid white;
+    transition: 1s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.header-btn:hover{
+    background-color: #58510e;
+    color: white;
+    font-size: 1.5rem;
+}
+.story{
+    grid-column: 1/-1;
+}
+.images{
+    display: grid;
+    grid-gap: 5px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit , minmax(150px, 1fr));
+    align-content: center;
+}
+.images img{
+    border-radius: 10px;
+    width: 100%;
+}
+.service{
+    grid-column: 1/-1;
+}
+.reserve{
+    grid-column: 1/-1;
+}
+.gallery{
+    grid-column: 1/-1;
+}
+.footer{
+    grid-column: 1/-1;
+}
+
+@media screen and (max-width: 670px) {
+    .image-4{
+        grid-column: 2/3;
+    }
+}
+@media screen and (max-width: 400px) {
+    .image-4{
+        grid-column: auto;
+    }
+}
+
